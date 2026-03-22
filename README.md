@@ -2,14 +2,14 @@
 
 An immersive archery experience built in Unity, focused on realistic bow mechanics, physics-based arrow flight, and interactive gameplay. This project explores intuitive player interaction, aiming systems, and satisfying feedback in a virtual environment.
 
-# Features
+# Features  
 1. Realistic Bow Mechanics
 Draw, aim, and release using physics-based interactions.
-2. Target Practice System
+2. Target Practice System  
 Shoot at targets with scoring feedback and scoreboard.
-3. Menu Naviagtion
+3. Menu Naviagtion  
 Allow users to navigate through menus to allow customization of gameplay.
-4. Gamemodes
+4. Gamemodes  
 Include a time trial gamemode where players must hit as many targets as possible before time runs out.
 
 # Built With
