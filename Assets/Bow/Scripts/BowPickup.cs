@@ -3,12 +3,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class BowPickup : MonoBehaviour
 {
-    private XRGrabInteractable grabInteractable;
+    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
     private bool hasStarted = false;
 
     private void Awake()
     {
-        grabInteractable = GetComponent<XRGrabInteractable>();
+        grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
         grabInteractable.selectEntered.AddListener(OnBowGrabbed);
     }
 
