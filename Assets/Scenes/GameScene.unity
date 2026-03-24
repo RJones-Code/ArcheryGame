@@ -843,83 +843,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 946018801}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45327f2c44c145df809bbdd9829b456d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7be615cf1160c704182a6e48e3e5fe96, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.XR.CompositionLayers::Unity.XR.CompositionLayers.Extensions.TexturesExtension
-  m_SourceTexture: 0
-  m_TargetEye: 0
-  m_LeftTexture: {fileID: 2800000, guid: 2a64e680d61e86e41b764d5bd8258131, type: 3}
-  m_RightTexture: {fileID: 2800000, guid: 2a64e680d61e86e41b764d5bd8258131, type: 3}
-  m_InEditorEmulation: 0
-  m_CustomRects: 0
-  m_Resolution: {x: 0, y: 0}
-  m_LeftEyeSourceRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  m_RightEyeSourceRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  m_LeftEyeDestinationRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  m_RightEyeDestinationRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  m_CropToAspect: 0
---- !u!114 &946018803
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946018801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c239b33ee5aee77488aadc51463c91de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.CompositionLayers::Unity.XR.CompositionLayers.CompositionOutline
---- !u!114 &946018804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946018801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3adf0bb75a444c61bde2e7841591bf41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.CompositionLayers::Unity.XR.CompositionLayers.CompositionLayer
-  m_UICanvas: {fileID: 0}
-  m_UIMirrorComponent: {fileID: 0}
-  m_LayerOutline: {fileID: 946018803}
-  m_Order: 1
-  m_LayerData:
-    rid: 5447344003829989379
-  m_PlatformLayerDataKeys: []
-  m_PlatformLayerDataTexts: []
-  m_PlatformLayerDataBinary: 
-  references:
-    version: 2
-    RefIds:
-    - rid: 5447344003829989379
-      type: {class: QuadLayerData, ns: Unity.XR.CompositionLayers.Layers, asm: Unity.XR.CompositionLayers}
-      data:
-        m_BlendType: 0
-        m_Size: {x: 1, y: 1}
-        m_ApplyTransformScale: 1
+  m_EditorClassIdentifier: Assembly-CSharp::TargetHit
 --- !u!1001 &1002769184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -984,6 +910,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: b0b77999a171ddb41bd9a0b9b0295e98, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c42062d5c87d45347a913157369f8e2b, type: 2}
     - target: {fileID: 919132149155446097, guid: b0b77999a171ddb41bd9a0b9b0295e98, type: 3}
       propertyPath: m_Name
       value: Target
@@ -992,12 +922,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b0b77999a171ddb41bd9a0b9b0295e98, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 946018804}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b0b77999a171ddb41bd9a0b9b0295e98, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 946018803}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b0b77999a171ddb41bd9a0b9b0295e98, type: 3}
       insertIndex: -1
       addedObject: {fileID: 946018802}
