@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6212438254343791629}
   - component: {fileID: 6299028149673192210}
   - component: {fileID: 1562931290379087565}
+  - component: {fileID: 5410029837462918005}
   m_Layer: 3
   m_Name: BowRoot
   m_TagString: Untagged
@@ -267,6 +268,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5410029837462918005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178692533746800721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7459b23b2de8744952600d0c190508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1562931290379087565
 MonoBehaviour:
   m_ObjectHideFlags: 0
