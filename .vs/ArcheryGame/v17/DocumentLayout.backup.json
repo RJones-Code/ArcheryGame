@@ -31,12 +31,21 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "UpdateHeadness.cs",
               "DocumentMoniker": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scenes\\MainMenu\\UpdateHeadness.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\MainMenu\\UpdateHeadness.cs",
               "ToolTip": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scenes\\MainMenu\\UpdateHeadness.cs",
               "RelativeToolTip": "Assets\\Scenes\\MainMenu\\UpdateHeadness.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAMAAAAAAAAAA==",
+=======
+              "Title": "SceneFader.cs",
+              "DocumentMoniker": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scenes\\MainMenu\\SceneFader.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\MainMenu\\SceneFader.cs",
+              "ToolTip": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scenes\\MainMenu\\SceneFader.cs",
+              "RelativeToolTip": "Assets\\Scenes\\MainMenu\\SceneFader.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAZAAAAAAAAAA==",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T19:34:56.32Z",
               "EditorCaption": ""
@@ -49,6 +58,7 @@
               "RelativeDocumentMoniker": "Assets\\Scenes\\MainMenu\\MainMenu.cs",
               "ToolTip": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scenes\\MainMenu\\MainMenu.cs",
               "RelativeToolTip": "Assets\\Scenes\\MainMenu\\MainMenu.cs",
+<<<<<<< Updated upstream
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T17:47:00.787Z",
@@ -77,6 +87,12 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T07:53:30.594Z"
+=======
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T19:36:25.377Z",
+              "EditorCaption": ""
+>>>>>>> Stashed changes
             }
           ]
         }
