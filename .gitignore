@@ -9,6 +9,7 @@ UserSettings/
 *.csproj
 *.unityproj
 *.sln
+*.slnx
 *.suo
 *.tmp
 *.user
@@ -19,3 +20,6 @@ UserSettings/
 
 .DS_Store
 Thumbs.db
+
+# Local editor / IDE (optional per machine)
+.vscode/
