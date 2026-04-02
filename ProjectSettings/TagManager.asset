@@ -5,16 +5,17 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
+  - Arrow
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Bow
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Arrow
+  - Terrain
+  - Weapon Rack
   - 
   - 
   - 
@@ -51,3 +52,4 @@ TagManager:
   - Light Layer 5
   - Light Layer 6
   - Light Layer 7
+  m_MigratedRenderPipelines: []

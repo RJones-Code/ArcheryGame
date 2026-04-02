@@ -11,6 +11,7 @@ public class BowPickup : MonoBehaviour
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
         if (grabInteractable != null)
             grabInteractable.selectEntered.AddListener(OnBowGrabbed);
+
     }
 
     private void OnBowGrabbed(SelectEnterEventArgs args)
