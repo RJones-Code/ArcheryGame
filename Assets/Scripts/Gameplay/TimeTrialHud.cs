@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class TimeTrialHud : MonoBehaviour
 {
-    const float PlaneDistance = 0.35f;
+    const float PlaneDistance = 1.5f;
     const int FontSize = 44;
 
     static readonly Color TimerColor = new(1f, 0.92f, 0.16f, 1f);

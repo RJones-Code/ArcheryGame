@@ -109,14 +109,14 @@ GameObject:
   - component: {fileID: 4688995797219495971}
   - component: {fileID: 8310229713498525856}
   - component: {fileID: 5690728219874809502}
-  - component: {fileID: 2863329298013761108}
+  - component: {fileID: 4846077195840636387}
   m_Layer: 3
   m_Name: BowRoot_Righty 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1836511092957712669
 Transform:
   m_ObjectHideFlags: 0
@@ -379,7 +379,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 656620213512949161, guid: dfac5300e84f60f4db1f2becf0eb8e66, type: 3}
   arrowSpawnPoint: {fileID: 8005237226225413789}
   arrowMaxSpeed: 10
---- !u!114 &2863329298013761108
+--- !u!114 &4846077195840636387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -388,7 +388,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6619080990456613738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9f8a9069a8687d4494742210b243e56, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e7459b23b2de8744952600d0c190508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BowPickup
 --- !u!1 &6844944152490142116
