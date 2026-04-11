@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\Gameplay\\TimeTrialHud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Gameplay\\TimeTrialHud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\Gameplay\\ScoreManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Gameplay\\ScoreManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Target\\Target.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Target\\Target.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\Gameplay\\TimeTrialHud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Gameplay\\TimeTrialHud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Target\\TargetManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "TimeTrialHud.cs",
               "DocumentMoniker": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\Gameplay\\TimeTrialHud.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\TimeTrialHud.cs",
@@ -43,7 +43,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ScoreManager.cs",
               "DocumentMoniker": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\Gameplay\\ScoreManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\ScoreManager.cs",
@@ -51,19 +51,21 @@
               "RelativeToolTip": "Assets\\Scripts\\Gameplay\\ScoreManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T23:14:15.524Z"
+              "WhenOpened": "2026-04-11T23:14:15.524Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Target.cs",
               "DocumentMoniker": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Target\\Target.cs",
               "RelativeDocumentMoniker": "Assets\\Target\\Target.cs",
               "ToolTip": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Target\\Target.cs",
               "RelativeToolTip": "Assets\\Target\\Target.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T22:25:54.399Z"
+              "WhenOpened": "2026-04-11T22:25:54.399Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
