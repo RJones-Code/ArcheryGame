@@ -51,5 +51,8 @@ public class WeaponRack : MonoBehaviour
     {
         yield return null; // wait one frame
         grabInteractable.interactionManager.SelectEnter(interactor, (UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable)bowGrab);
+
+        if (GameTimer.Instance != null)
+            GameTimer.Instance.StartTimer();
     }
 }
