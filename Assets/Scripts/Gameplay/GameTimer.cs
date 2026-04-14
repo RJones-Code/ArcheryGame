@@ -35,6 +35,9 @@ public class GameTimer : MonoBehaviour
 
     public void StartTimer()
     {
+        if (IsRunning)
+            return;
+
         TimeRemaining = roundDuration;
         IsRunning = true;
         OnTimerStart?.Invoke();
