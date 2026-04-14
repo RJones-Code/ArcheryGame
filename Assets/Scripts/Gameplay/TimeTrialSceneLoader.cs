@@ -27,6 +27,9 @@ public static class TimeTrialSceneLoader
             root.AddComponent<GameTimer>();
 
         root.AddComponent<TimeTrialHud>();
+
+        if (Object.FindFirstObjectByType<LeaderboardRecorder>(FindObjectsInactive.Include) == null)
+            root.AddComponent<LeaderboardRecorder>();
     }
 
     static bool IsGameplayScene(Scene scene)
