@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    public SceneFader fader;
 
     public void PlayGame()
     {
-        fader.FadeToScene("GameScene");
+        Time.timeScale = 1f;
+
+        SceneFader.GetOrCreate().FadeToScene("GameScene");
     }
 
     public void QuitGame()
