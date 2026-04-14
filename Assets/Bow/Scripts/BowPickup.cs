@@ -4,7 +4,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class BowPickup : MonoBehaviour
 {
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
-    private bool hasStarted = false;
 
     private void Awake()
     {
@@ -16,12 +15,9 @@ public class BowPickup : MonoBehaviour
 
     private void OnBowGrabbed(SelectEnterEventArgs args)
     {
-        if (hasStarted)
-            return;
         if (GameTimer.Instance == null)
             return;
 
-        hasStarted = true;
         GameTimer.Instance.StartTimer();
     }
 
