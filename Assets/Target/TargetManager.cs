@@ -15,9 +15,18 @@ public class TargetManager : MonoBehaviour
     private List<GameObject> activeTargets = new List<GameObject>();
     private List<Transform> usedSpawns = new List<Transform>();
 
+    private bool spawningEnabled = true;
+
     void Start()
     {
         SpawnInitialTargets();
+
+        GameTimer.Instance.OnTimerEnd.AddListener(StopSpawning);
+    }
+
+    void StopSpawning()
+    {
+        spawningEnabled = false;
     }
 
     void SpawnInitialTargets()
@@ -30,6 +39,8 @@ public class TargetManager : MonoBehaviour
 
     public void SpawnTarget()
     {
+        if (!spawningEnabled) return;
+
         Transform spawn = GetRandomSpawnPoint();
 
         GameObject prefabToUse = GetPrefabForSpawn(spawn);

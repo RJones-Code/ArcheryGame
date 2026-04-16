@@ -15,7 +15,7 @@ public class BowPickup : MonoBehaviour
 
     private void OnBowGrabbed(SelectEnterEventArgs args)
     {
-        if (GameTimer.Instance == null)
+        if (GameTimer.Instance == null || GameTimer.Instance.IsGameOver)
             return;
 
         GameTimer.Instance.StartTimer();
