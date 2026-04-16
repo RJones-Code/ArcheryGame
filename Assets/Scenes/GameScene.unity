@@ -3903,7 +3903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TargetManager
   sittingTargetPrefab: {fileID: 2457650420934561955, guid: f62f57b1f308c9449888aec9a4d80a8a, type: 3}
-  floatingTargetPrefab: {fileID: 4957979209218499714, guid: 8003b6a1cd736524e9027956cfd040c6, type: 3}
+  floatingTargetPrefab: {fileID: 5807169720453432624, guid: 2aab35149dc58ab49baf0500191ebaf7, type: 3}
   lowRow: {fileID: 187734746}
   midRow: {fileID: 538451407}
   highRow: {fileID: 646127696}
@@ -4806,7 +4806,7 @@ RectTransform:
   m_GameObject: {fileID: 1435411405}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 12.411}
-  m_LocalScale: {x: 0.0012948309, y: 0.003231102, z: 0.002}
+  m_LocalScale: {x: 0.0008713694, y: 0.0021744024, z: 0.00134592}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1237726435}
