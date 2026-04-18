@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using TMPro;
 
 public class CalibrationManager : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class CalibrationManager : MonoBehaviour
 
     [Header("Optional UI")]
     public GameObject calibrationUI; // "Hold arms out..." panel
+    public GameObject completionUI;  // "Calibration complete!" panel
+    public TMP_Text completionText;
 
     public float calibratedWingspan { get; private set; }
 
@@ -45,14 +48,14 @@ public class CalibrationManager : MonoBehaviour
         if (calibratedWingspan > 0f)
             return calibratedWingspan;
 
-        if (PlayerPrefs.HasKey(WingspanKey))
-            return PlayerPrefs.GetFloat(WingspanKey);
-
         return 1.5f; // fallback default
     }
 
     private IEnumerator CalibrationRoutine()
     {
+        if (completionUI != null) 
+            completionUI.SetActive(false);
+
         if (leftHand == null || rightHand == null)
         {
             Debug.LogError("Calibration failed: Hand references not assigned.");
@@ -81,6 +84,14 @@ public class CalibrationManager : MonoBehaviour
 
         if (calibrationUI != null)
             calibrationUI.SetActive(false);
+
+        if (completionUI != null)
+        {
+            completionUI.SetActive(true);
+
+            completionText.text =
+                $"Calibration Complete!\nWingspan: {calibratedWingspan:F2} m";
+        }
 
         Debug.Log("Calibration complete: " + calibratedWingspan);
 

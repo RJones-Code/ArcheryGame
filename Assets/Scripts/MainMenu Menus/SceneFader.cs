@@ -33,7 +33,7 @@ public class SceneFader : MonoBehaviour
             return Instance;
 
         // Try find existing one in scene
-        Instance = FindFirstObjectByType<SceneFader>();
+        Instance = FindAnyObjectByType<SceneFader>();
 
         if (Instance != null)
             return Instance;

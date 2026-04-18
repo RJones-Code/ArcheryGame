@@ -736,7 +736,7 @@ MonoBehaviour:
   midPointVisualObject: {fileID: 5509824693281459011}
   midPointParent: {fileID: 5885649842297230830}
   bowStringStretchLimit: 0.3
-  drawMultiplier: 0.5
+  drawMultiplier: 0.25
   OnBowPulled:
     m_PersistentCalls:
       m_Calls:

@@ -4,10 +4,11 @@ public class OptionsMenu : MonoBehaviour
 {
     public Transform playerCamera;
     public float distanceFromPlayer = 2f;
+    public float heightOffset = 1.2f;
 
-    public GameObject leftRayInteractor;
-    public GameObject rightRayInteractor;
-
+    public GameObject leftNearFar;
+    public GameObject rightNearFar;
+    
     private bool isVisible = false;
 
     void Start()
@@ -39,7 +40,7 @@ public class OptionsMenu : MonoBehaviour
 
         ShowInFrontOfPlayer();
 
-        Time.timeScale = 0f;
+        Time.timeScale = 0f; //Freeze game while menu is open
     }
 
     void HideMenu()
@@ -48,7 +49,7 @@ public class OptionsMenu : MonoBehaviour
 
         gameObject.SetActive(false);
 
-        Time.timeScale = 1f;
+        Time.timeScale = 1f; // Unfreeze game when menu is closed
     }
 
     void HideMenuInstant()
@@ -58,26 +59,27 @@ public class OptionsMenu : MonoBehaviour
 
     void SetUIInteractors(bool state)
     {
-        if (leftRayInteractor != null)
-            leftRayInteractor.SetActive(state);
+        if (leftNearFar != null)
+            leftNearFar.SetActive(state);
 
-        if (rightRayInteractor != null)
-            rightRayInteractor.SetActive(state);
+        if (rightNearFar != null)
+            rightNearFar.SetActive(state);
     }
 
     void ShowInFrontOfPlayer()
     {
-        transform.position = playerCamera.position + playerCamera.forward * distanceFromPlayer;
+        // Flatten forward direction (no tilt)
+        Vector3 forward = playerCamera.forward;
+        forward.y = 0;
+        forward.Normalize();
 
-        transform.LookAt(playerCamera);
-        transform.Rotate(0, 180, 0);
-    }
+        // Position in front + raise height
+        Vector3 position = playerCamera.position + forward * distanceFromPlayer;
+        position.y += heightOffset;
 
-    public void ReturnToMenu()
-    {
-        Time.timeScale = 1f;
+        transform.position = position;
 
-        // SAFE Scene transition (your new system)
-        SceneFader.GetOrCreate().FadeToScene("MainMenu");
+        // Face player
+        transform.rotation = Quaternion.LookRotation(forward);
     }
 }
