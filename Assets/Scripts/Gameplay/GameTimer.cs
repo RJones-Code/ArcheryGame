@@ -12,6 +12,8 @@ public class GameTimer : MonoBehaviour
     public UnityEvent OnTimerStart;
     public UnityEvent OnTimerEnd;
 
+    public bool IsGameOver { get; private set; }
+
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -28,6 +30,7 @@ public class GameTimer : MonoBehaviour
         {
             TimeRemaining = 0f;
             IsRunning = false;
+            IsGameOver = true;
             OnTimerEnd?.Invoke();
             Debug.Log($"Time's up! Final Score: {ScoreManager.Instance.Score}");
         }
@@ -39,6 +42,7 @@ public class GameTimer : MonoBehaviour
             return;
 
         TimeRemaining = roundDuration;
+        IsGameOver = false;
         IsRunning = true;
         OnTimerStart?.Invoke();
     }

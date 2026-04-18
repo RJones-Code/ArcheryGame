@@ -18,6 +18,9 @@ public class BowStringController : MonoBehaviour
     [SerializeField]
     private float bowStringStretchLimit = 0.3f;
 
+    [SerializeField]
+    private float drawMultiplier = 0.5f;
+
     private Transform interactor;
 
     private float strength;
@@ -34,6 +37,8 @@ public class BowStringController : MonoBehaviour
     {
         interactable.selectEntered.AddListener(PrepareBowString);
         interactable.selectExited.AddListener(ResetBowString);
+
+        ApplyCalibration();
     }
 
     private void ResetBowString(SelectExitEventArgs arg0)
@@ -53,6 +58,22 @@ public class BowStringController : MonoBehaviour
     {
         interactor = arg0.interactorObject.transform;
         OnBowPulled?.Invoke();
+    }
+
+    void ApplyCalibration()
+    {
+        if (CalibrationManager.Instance != null)
+        {
+            float wingspan = CalibrationManager.Instance.GetWingspan();
+
+            bowStringStretchLimit = wingspan * drawMultiplier;
+
+            Debug.Log("Bow draw distance set to: " + bowStringStretchLimit);
+        }
+        else
+        {
+            Debug.LogWarning("CalibrationManager not found, using default draw distance.");
+        }
     }
 
     private void Update()

@@ -2,23 +2,12 @@ using UnityEngine;
 
 public class LeaderboardRecorder : MonoBehaviour
 {
-    void Start()
-    {
-        var timer = GameTimer.Instance;
-        if (timer != null)
-            timer.OnTimerEnd.AddListener(OnRoundEnd);
-    }
-
-    void OnDestroy()
-    {
-        var timer = GameTimer.Instance;
-        if (timer != null)
-            timer.OnTimerEnd.RemoveListener(OnRoundEnd);
-    }
-
-    void OnRoundEnd()
+    public void SubmitScore(string playerName)
     {
         int score = ScoreManager.Instance != null ? ScoreManager.Instance.Score : 0;
-        LeaderboardDatabase.AddEntry(LeaderboardDatabase.PlayerName, score);
+
+        LeaderboardDatabase.AddEntry(playerName, score);
+
+        Debug.Log($"Saved Score: {playerName} - {score}");
     }
 }
