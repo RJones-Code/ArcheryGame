@@ -26,7 +26,7 @@ public static class TimeTrialSceneLoader
         if (Object.FindFirstObjectByType<GameTimer>(FindObjectsInactive.Include) == null)
             root.AddComponent<GameTimer>();
 
-        root.AddComponent<TimeTrialHud>();
+        //root.AddComponent<TimeTrialHud>();
 
         if (Object.FindFirstObjectByType<LeaderboardRecorder>(FindObjectsInactive.Include) == null)
             root.AddComponent<LeaderboardRecorder>();
