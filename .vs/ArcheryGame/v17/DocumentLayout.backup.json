@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Bow\\Scripts\\BowController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Bow\\Scripts\\BowController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Target\\Target.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Target\\Target.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Bow\\Scripts\\ArrowController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Bow\\Scripts\\ArrowController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\GameScene Menus\\OptionsMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameScene Menus\\OptionsMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Bow\\Scripts\\StickingArrowSurface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Bow\\Scripts\\StickingArrowSurface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\Gameplay\\TimerDisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Gameplay\\TimerDisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\Gameplay\\GameTimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Gameplay\\GameTimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\MainMenu Menus\\VolumeSlider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MainMenu Menus\\VolumeSlider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\MainMenu Menus\\AudioManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MainMenu Menus\\AudioManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,41 +39,76 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BowController.cs",
-              "DocumentMoniker": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Bow\\Scripts\\BowController.cs",
-              "RelativeDocumentMoniker": "Assets\\Bow\\Scripts\\BowController.cs",
-              "ToolTip": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Bow\\Scripts\\BowController.cs",
-              "RelativeToolTip": "Assets\\Bow\\Scripts\\BowController.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAcwGMAAAAoAAAAAAAAAA==",
+              "Title": "Target.cs",
+              "DocumentMoniker": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Target\\Target.cs",
+              "RelativeDocumentMoniker": "Assets\\Target\\Target.cs",
+              "ToolTip": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Target\\Target.cs",
+              "RelativeToolTip": "Assets\\Target\\Target.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T06:00:08.254Z",
+              "WhenOpened": "2026-04-21T17:21:24.568Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ArrowController.cs",
-              "DocumentMoniker": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Bow\\Scripts\\ArrowController.cs",
-              "RelativeDocumentMoniker": "Assets\\Bow\\Scripts\\ArrowController.cs",
-              "ToolTip": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Bow\\Scripts\\ArrowController.cs",
-              "RelativeToolTip": "Assets\\Bow\\Scripts\\ArrowController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAlAAAAAAAAAA==",
+              "Title": "OptionsMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\GameScene Menus\\OptionsMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameScene Menus\\OptionsMenu.cs",
+              "ToolTip": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\GameScene Menus\\OptionsMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameScene Menus\\OptionsMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T05:57:15.026Z",
+              "WhenOpened": "2026-04-21T17:10:51.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "StickingArrowSurface.cs",
-              "DocumentMoniker": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Bow\\Scripts\\StickingArrowSurface.cs",
-              "RelativeDocumentMoniker": "Assets\\Bow\\Scripts\\StickingArrowSurface.cs",
-              "ToolTip": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Bow\\Scripts\\StickingArrowSurface.cs",
-              "RelativeToolTip": "Assets\\Bow\\Scripts\\StickingArrowSurface.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA0AAAAAAAAAA==",
+              "Title": "TimerDisplay.cs",
+              "DocumentMoniker": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\Gameplay\\TimerDisplay.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\TimerDisplay.cs",
+              "ToolTip": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\Gameplay\\TimerDisplay.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\TimerDisplay.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T13:00:11.17Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T16:57:35.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameTimer.cs",
+              "DocumentMoniker": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\Gameplay\\GameTimer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\GameTimer.cs",
+              "ToolTip": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\Gameplay\\GameTimer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\GameTimer.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T16:55:14.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VolumeSlider.cs",
+              "DocumentMoniker": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\MainMenu Menus\\VolumeSlider.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu Menus\\VolumeSlider.cs",
+              "ToolTip": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\MainMenu Menus\\VolumeSlider.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MainMenu Menus\\VolumeSlider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T16:18:35.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AudioManager.cs",
+              "DocumentMoniker": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\MainMenu Menus\\AudioManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu Menus\\AudioManager.cs",
+              "ToolTip": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\MainMenu Menus\\AudioManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MainMenu Menus\\AudioManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T16:02:28.848Z"
             }
           ]
         }
