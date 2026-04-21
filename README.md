@@ -28,23 +28,23 @@ git clone https://github.com/RJones-Code/ArcheryGame.git
 Open the project using Unity Hub  
   
 Load the main scene:  
-Assets/Scenes/MainMenu.unity
+Assets/Scenes/MainMenu.unity  
 
-Load the game scene:
-Assets/Scenes/GameScene.unity
+Open the game scene and keep unloaded:  
+Assets/Scenes/GameScene.unity  
 
 Press Play to start  
 
 # Project Structure
 Assets/  
-├── Bow  
-├── Environment  
-├── HandModels  
-├── Scenes  
-├── Scripts  
-├── Sounds  
-├── Target  
-└── WeaponRack  
+├── Bow         (Bow & Arrow Models, Prefabs, Scripts, Textures, and Materials)  
+├── Environment (Environment Object, Terrain Data)  
+├── HandModels  (Models and Prefabs for unity hands)  
+├── Scenes      (Scenes and all lighting data)
+├── Scripts     (Scripts used for the main gameplay loop, Main Menu, and Game Scene menus)
+├── Sounds      (Sounds used for bow effects shoot, drop, pull, and impact)
+├── Target      (Target Models, Prefabs, Scripts, Textures, and Materials)
+└── WeaponRack  (Weapon Rack Texture and Script)
 
 # Future Improvements
 More Gamemodes  

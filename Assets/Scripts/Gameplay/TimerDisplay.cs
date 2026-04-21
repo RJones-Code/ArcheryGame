@@ -9,11 +9,31 @@ public class TimerDisplay : MonoBehaviour
     {
         if (GameTimer.Instance == null) return;
 
-        bool running = GameTimer.Instance.IsRunning;
+        var timer = GameTimer.Instance;
 
-        if (timerText.gameObject.activeSelf != running)
-            timerText.gameObject.SetActive(running);
+        // Show countdown (3,2,1)
+        if (timer.IsCountingDown)
+        {
+            timerText.fontSize = 120;
+            timerText.color = Color.yellow;
 
-        timerText.text = GameTimer.Instance.GetFormattedTime();
+            timerText.gameObject.SetActive(true);
+            timerText.text = Mathf.Ceil(timer.CountdownTime).ToString();
+            return;
+        }
+
+        // Show main timer
+        if (timer.IsRunning)
+        {
+            timerText.fontSize = 60;
+            timerText.color = Color.white;
+
+            timerText.gameObject.SetActive(true);
+            timerText.text = timer.GetFormattedTime();
+            return;
+        }
+
+        // Hide when not active (optional)
+        timerText.gameObject.SetActive(false);
     }
 }

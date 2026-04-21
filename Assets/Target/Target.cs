@@ -12,9 +12,14 @@ public class Target : MonoBehaviour
         GameTimer.Instance.OnTimerEnd.AddListener(DisableTarget);
     }
 
-    void DisableTarget()
+    public void DisableTarget()
     {
         canBeHit = false;
+    }
+
+    public void EnableTarget()
+    {
+        canBeHit = true;
     }
 
     private void OnCollisionEnter(Collision collision)
