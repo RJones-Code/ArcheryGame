@@ -37,20 +37,20 @@ Press Play to start
 
 # Project Structure
 Assets/  
-├── Bow
-├── Environment
-├── HandModels
-├── Scenes
-├── Scripts
-├── Sounds
-├── Target
-└── WeaponRack
+├── Bow  
+├── Environment  
+├── HandModels  
+├── Scenes  
+├── Scripts  
+├── Sounds  
+├── Target  
+└── WeaponRack  
 
 # Future Improvements
 More Gamemodes  
 
 # Contributing
-Russell Jones, 
+Russell Jones, Sean Gao, Ishan Phadke, Julia Sokolowski
 
 # License
 This project is licensed under the MIT License.  
