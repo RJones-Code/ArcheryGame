@@ -28,25 +28,34 @@ git clone https://github.com/RJones-Code/ArcheryGame.git
 Open the project using Unity Hub  
   
 Load the main scene:  
-~~Assets/Scenes/MainScene.unity~~ (TBD)  
+Assets/Scenes/MainMenu.unity
+
+Load the game scene:
+Assets/Scenes/GameScene.unity
+
 Press Play to start  
 
-# Project Structure (TBC)  
+# Project Structure
 Assets/  
-├──   
-└──   
+├── Bow
+├── Environment
+├── HandModels
+├── Scenes
+├── Scripts
+├── Sounds
+├── Target
+└── WeaponRack
 
 # Future Improvements
 More Gamemodes  
-Moving Targets  
-Sounds Effects  
-More in depth Gameplay  
 
 # Contributing
-Names of Contributors  
+Russell Jones, 
 
 # License
 This project is licensed under the MIT License.  
 
-# Acknowledgments (TBC)
-Unity documentation and community resources  
+# Acknowledgments
+- Occulus Hand Models: https://developers.meta.com/horizon/downloads/package/oculus-hand-models/
+- Low Poly Environment: https://assetstore.unity.com/packages/3d/environments/low-poly-environment-nature-free-lowpoly-medieval-fantasy-series-187052 
+- Sunny Valley Studio: https://www.patreon.com/posts/74926653 
