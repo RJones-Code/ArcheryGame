@@ -40,11 +40,11 @@ Assets/
 ├── Bow         (Bow & Arrow Models, Prefabs, Scripts, Textures, and Materials)  
 ├── Environment (Environment Object, Terrain Data)  
 ├── HandModels  (Models and Prefabs for unity hands)  
-├── Scenes      (Scenes and all lighting data)
-├── Scripts     (Scripts used for the main gameplay loop, Main Menu, and Game Scene menus)
-├── Sounds      (Sounds used for bow effects shoot, drop, pull, and impact)
-├── Target      (Target Models, Prefabs, Scripts, Textures, and Materials)
-└── WeaponRack  (Weapon Rack Texture and Script)
+├── Scenes      (Scenes and all lighting data)  
+├── Scripts     (Scripts used for the main gameplay loop, Main Menu, and Game Scene menus)  
+├── Sounds      (Sounds used for bow effects shoot, drop, pull, and impact)  
+├── Target      (Target Models, Prefabs, Scripts, Textures, and Materials)  
+└── WeaponRack  (Weapon Rack Texture and Script)  
 
 # Future Improvements
 More Gamemodes  

@@ -14,7 +14,7 @@ public class TimerDisplay : MonoBehaviour
         // Show countdown (3,2,1)
         if (timer.IsCountingDown)
         {
-            timerText.fontSize = 120;
+            timerText.fontSize = 50;
             timerText.color = Color.yellow;
 
             timerText.gameObject.SetActive(true);
@@ -25,7 +25,7 @@ public class TimerDisplay : MonoBehaviour
         // Show main timer
         if (timer.IsRunning)
         {
-            timerText.fontSize = 60;
+            timerText.fontSize = 25;
             timerText.color = Color.white;
 
             timerText.gameObject.SetActive(true);
