@@ -7,6 +7,8 @@ public class MainMenu : MonoBehaviour
 
     static readonly Color LeaderboardTextColor = new Color(0.06f, 0.07f, 0.09f, 1f);
 
+    public static bool OpenLeaderboardOnLoad = false;
+
     GameObject _main;
     GameObject _options;
     GameObject _about;
@@ -32,6 +34,12 @@ public class MainMenu : MonoBehaviour
         var bgGo = startMenu != null ? startMenu.Find("Background")?.gameObject : GameObject.Find("Background");
         if (bgGo != null)
             _menuBackgroundImage = bgGo.GetComponent<Image>();
+
+        if (OpenLeaderboardOnLoad)
+        {
+            OpenLeaderboardOnLoad = false;
+            OpenLeaderboard();
+        }
     }
 
     void EnsureLeaderboardPage()
@@ -229,6 +237,12 @@ public class MainMenu : MonoBehaviour
 
         if (_menuBackgroundImage != null)
             _menuBackgroundImage.raycastTarget = true;
+    }
+
+    public void GoToLeaderboard()
+    {
+        MainMenu.OpenLeaderboardOnLoad = true;
+        SceneFader.GetOrCreate().FadeToScene("MainMenu");
     }
 
     public void QuitGame()

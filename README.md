@@ -42,7 +42,7 @@ Assets/
 ├── HandModels  (Models and Prefabs for unity hands)  
 ├── Scenes      (Scenes and all lighting data)  
 ├── Scripts     (Scripts used for the main gameplay loop, Main Menu, and Game Scene menus)  
-├── Sounds      (Sounds used for bow effects shoot, drop, pull, and impact)  
+├── Sounds      (Sounds used for bow effects shoot, drop, pull, and impact, scene music, and audio mixer)  
 ├── Target      (Target Models, Prefabs, Scripts, Textures, and Materials)  
 └── WeaponRack  (Weapon Rack Texture and Script)  
 
@@ -59,3 +59,5 @@ This project is licensed under the MIT License.
 - Occulus Hand Models: https://developers.meta.com/horizon/downloads/package/oculus-hand-models/
 - Low Poly Environment: https://assetstore.unity.com/packages/3d/environments/low-poly-environment-nature-free-lowpoly-medieval-fantasy-series-187052 
 - Sunny Valley Studio: https://www.patreon.com/posts/74926653 
+- Main Menu Music: HeatlyBros - Option Menu https://www.youtube.com/watch?v=krAEJH0SuGY 
+- Game Scene Music: HeatlyBros - Battle Fantasy https://www.youtube.com/watch?v=BTBVX2uGA00 
