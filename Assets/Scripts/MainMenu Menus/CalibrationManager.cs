@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CalibrationManager : MonoBehaviour
 {
@@ -35,8 +36,8 @@ public class CalibrationManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
+
 
     public void CalibrateWingspan()
     {
@@ -48,7 +49,7 @@ public class CalibrationManager : MonoBehaviour
         if (calibratedWingspan > 0f)
             return calibratedWingspan;
 
-        return 1.5f; // fallback default
+        return PlayerPrefs.GetFloat(WingspanKey, 1.5f);
     }
 
     private IEnumerator CalibrationRoutine()
@@ -81,6 +82,9 @@ public class CalibrationManager : MonoBehaviour
         }
 
         calibratedWingspan = total / sampleFrames;
+
+        PlayerPrefs.SetFloat(WingspanKey, calibratedWingspan);
+        PlayerPrefs.Save();
 
         if (calibrationUI != null)
             calibrationUI.SetActive(false);

@@ -72,18 +72,11 @@ public class BowStringController : MonoBehaviour
 
     void ApplyCalibration()
     {
-        if (CalibrationManager.Instance != null)
-        {
-            float wingspan = CalibrationManager.Instance.GetWingspan();
+        float wingspan = PlayerPrefs.GetFloat("Wingspan", 1.5f);
 
-            bowStringStretchLimit = wingspan * drawMultiplier;
+        bowStringStretchLimit = wingspan * drawMultiplier;
 
-            Debug.Log("Bow draw distance set to: " + bowStringStretchLimit);
-        }
-        else
-        {
-            Debug.LogWarning("CalibrationManager not found, using default draw distance.");
-        }
+        Debug.Log("Bow draw distance set to: " + bowStringStretchLimit);
     }
 
     private void Update()

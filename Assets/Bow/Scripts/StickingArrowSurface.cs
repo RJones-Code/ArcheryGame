@@ -8,7 +8,6 @@ public class StickingArrowToSurface : MonoBehaviour
     private Rigidbody rb;
     [SerializeField]
     private SphereCollider myCollider;
-
     [SerializeField]
     private GameObject stickingArrow;
 
@@ -16,6 +15,13 @@ public class StickingArrowToSurface : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.GetComponent<Target>() != null)
+        {
+            // Let target handle score/destruction
+            Destroy(gameObject);
+            return;
+        }
+
         rb.isKinematic = true;
         myCollider.isTrigger = true;
 
