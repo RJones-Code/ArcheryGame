@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 720904561241455229}
   - component: {fileID: 109576932728090332}
   - component: {fileID: 4972188141308365450}
+  - component: {fileID: 5018726396643736339}
   m_Layer: 3
   m_Name: MidPointGrabObj
   m_TagString: Untagged
@@ -341,6 +342,18 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &5018726396643736339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342185767090371286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e214bd03c49e44398d951c4b47ecaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StringHaptics
 --- !u!1 &1053240659110835293
 GameObject:
   m_ObjectHideFlags: 0

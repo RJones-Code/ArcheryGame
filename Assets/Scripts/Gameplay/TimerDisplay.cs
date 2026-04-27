@@ -4,6 +4,7 @@ using TMPro;
 public class TimerDisplay : MonoBehaviour
 {
     public TMP_Text timerText;
+    public GameObject backdrop;
 
     void Update()
     {
@@ -14,10 +15,11 @@ public class TimerDisplay : MonoBehaviour
         // Show countdown (3,2,1)
         if (timer.IsCountingDown)
         {
-            timerText.fontSize = 60;
+            timerText.fontSize = 90;
             timerText.color = Color.yellow;
 
             timerText.gameObject.SetActive(true);
+            backdrop.SetActive(true);
             timerText.text = Mathf.Ceil(timer.CountdownTime).ToString();
             return;
         }
@@ -25,15 +27,17 @@ public class TimerDisplay : MonoBehaviour
         // Show main timer
         if (timer.IsRunning)
         {
-            timerText.fontSize = 30;
+            timerText.fontSize = 75;
             timerText.color = Color.white;
 
             timerText.gameObject.SetActive(true);
+            backdrop.SetActive(true);
             timerText.text = timer.GetFormattedTime();
             return;
         }
 
         // Hide when not active (optional)
         timerText.gameObject.SetActive(false);
+        backdrop.SetActive(false);
     }
 }
