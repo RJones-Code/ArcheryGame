@@ -2,6 +2,59 @@ using System;
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
+/*
+ * File: CalibrationManager.cs
+ *
+ * Description:
+ * Handles player physical calibration for VR gameplay by measuring
+ * the player's wingspan (distance between hands). This value is used
+ * to scale gameplay interactions such as bow draw distance, ensuring
+ * consistent feel across different players.
+ *
+ * Core Responsibilities:
+ * - Measure real-world distance between VR controllers (hands)
+ * - Compute and store calibrated wingspan value
+ * - Persist calibration data using PlayerPrefs
+ * - Provide events for systems that depend on calibration updates
+ * - Manage optional calibration UI feedback
+ *
+ * Key Components:
+ * - leftHand / rightHand:
+ *      VR hand transforms used for distance measurement
+ *
+ * - calibratedWingspan:
+ *      Final computed wingspan used by gameplay systems
+ *
+ * - WingspanKey:
+ *      PlayerPrefs key for persistent storage
+ *
+ * Behavior:
+ * - CalibrateWingspan():
+ *      Starts calibration coroutine
+ *
+ * - CalibrationRoutine():
+ *      1. Shows calibration UI (if assigned)
+ *      2. Waits for player to stabilize arms
+ *      3. Samples hand distance over multiple frames
+ *      4. Computes average wingspan
+ *      5. Saves result to PlayerPrefs
+ *      6. Triggers OnCalibrationUpdated event
+ *      7. Displays completion UI feedback
+ *
+ * - GetWingspan():
+ *      Returns runtime-calibrated value or saved fallback default
+ *
+ * Dependencies:
+ * - VR tracking (hand transforms)
+ * - Unity PlayerPrefs for persistence
+ * - TMPro for UI display
+ *
+ * Usage:
+ * Call CalibrationManager.Instance.CalibrateWingspan()
+ * at game start or in settings menu.
+ */
 
 public class CalibrationManager : MonoBehaviour
 {
@@ -35,8 +88,8 @@ public class CalibrationManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
+
 
     public void CalibrateWingspan()
     {
@@ -48,7 +101,7 @@ public class CalibrationManager : MonoBehaviour
         if (calibratedWingspan > 0f)
             return calibratedWingspan;
 
-        return 1.5f; // fallback default
+        return PlayerPrefs.GetFloat(WingspanKey, 1.5f);
     }
 
     private IEnumerator CalibrationRoutine()
@@ -67,7 +120,6 @@ public class CalibrationManager : MonoBehaviour
 
         Debug.Log("Hold your arms out steady...");
 
-        // Works even if Time.timeScale = 0
         yield return new WaitForSecondsRealtime(calibrationDelay);
 
         float total = 0f;
@@ -81,6 +133,9 @@ public class CalibrationManager : MonoBehaviour
         }
 
         calibratedWingspan = total / sampleFrames;
+
+        PlayerPrefs.SetFloat(WingspanKey, calibratedWingspan);
+        PlayerPrefs.Save();
 
         if (calibrationUI != null)
             calibrationUI.SetActive(false);

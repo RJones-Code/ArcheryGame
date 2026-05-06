@@ -4,6 +4,58 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * File: LeaderboardMenuPanel.cs
+ *
+ * Description:
+ * Manages the runtime leaderboard UI panel, including data formatting,
+ * scrollable display logic, and dynamic windowing of leaderboard entries.
+ * Converts raw leaderboard data into a paginated, scrollable TextMeshPro
+ * display with custom layout constraints.
+ *
+ * Core Responsibilities:
+ * - Retrieve and format leaderboard entries from LeaderboardDatabase
+ * - Generate scrollable text-based leaderboard UI
+ * - Handle scrollbar-driven pagination and visible window calculation
+ * - Dynamically adjust UI layout based on viewport size
+ * - Provide navigation back to main menu
+ *
+ * Key Components:
+ * - scoresText: TextMeshPro component displaying leaderboard entries
+ * - scoresScrollbar: Controls scroll position and visible range
+ * - scoresViewport: Defines visible UI bounds for layout calculations
+ *
+ * Behavior:
+ * - OnEnable():
+ *      - Subscribes to scrollbar events
+ *      - Refreshes leaderboard display
+ *
+ * - RefreshScores():
+ *      - Loads top leaderboard entries
+ *      - Formats entries into internal string list
+ *      - Initializes scrollbar state
+ *      - Triggers UI update
+ *
+ * - UpdateVisibleWindow():
+ *      - Calculates how many entries fit in the viewport
+ *      - Determines current visible slice based on scrollbar position
+ *      - Builds formatted leaderboard string with header + entries
+ *      - Updates TextMeshPro content and adjusts layout dynamically
+ *
+ * - BackToMainMenu():
+ *      - Finds MainMenu instance and closes leaderboard panel
+ *
+ * Dependencies:
+ * - LeaderboardDatabase (data source)
+ * - TextMeshPro (UI rendering)
+ * - Unity UI Scrollbar and RectTransform system
+ *
+ * Usage:
+ * Attached to the leaderboard UI root object.
+ * Must be bound to TextMeshPro, Scrollbar, and Viewport via inspector
+ * or via LeaderboardMenuPanel.Bind* methods at runtime.
+ */
+
 public class LeaderboardMenuPanel : MonoBehaviour
 {
     /// <summary> Horizontal inset so score text does not sit flush against the scrollbar; controls most of the visible gap. </summary>

@@ -1,6 +1,60 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * File: TargetManager.cs
+ *
+ * Description:
+ * Manages the spawning, tracking, and replacement of targets in the VR archery game.
+ * Ensures a consistent number of active targets while preventing duplicate spawn usage
+ * and respecting game state (e.g., stopping when the timer ends).
+ *
+ * Core Responsibilities:
+ * - Spawn an initial set of targets at game start
+ * - Maintain a maximum number of active targets
+ * - Randomly select spawn points while avoiding reuse
+ * - Choose appropriate target types based on spawn location
+ * - Replace destroyed targets dynamically
+ * - Stop spawning when the game ends
+ *
+ * Key Components:
+ * - sittingTargetPrefab: Prefab used for low-row targets
+ * - floatingTargetPrefab: Prefab used for mid/high-row targets
+ * - lowRow / midRow / highRow: Parent transforms containing spawn points
+ *
+ * Behavior:
+ * - Start():
+ *      - Spawns initial targets up to maxTargets
+ *      - Subscribes to GameTimer event to stop spawning
+ *
+ * - SpawnTarget():
+ *      - Selects a valid spawn point
+ *      - Chooses correct prefab based on row
+ *      - Instantiates target and assigns dependencies
+ *      - Tracks active targets and used spawn points
+ *
+ * - GetRandomSpawnPoint():
+ *      - Gathers all spawn points
+ *      - Filters out currently used ones
+ *      - Falls back to all spawns if none are available
+ *
+ * - OnTargetDestroyed():
+ *      - Removes target and frees its spawn point
+ *      - Spawns a replacement target (if allowed)
+ *
+ * - StopSpawning():
+ *      - Disables further spawning when the game ends
+ *
+ * Dependencies:
+ * - Target script (must expose manager and spawnPoint fields)
+ * - GameTimer singleton (must expose OnTimerEnd event)
+ *
+ * Usage:
+ * Attach this script to a scene manager object.
+ * Assign prefabs and spawn row transforms in the inspector.
+ * Ensure each row contains child transforms representing spawn positions.
+ */
+
 public class TargetManager : MonoBehaviour
 {
     public GameObject sittingTargetPrefab;
