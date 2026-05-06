@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\WeaponRack\\WeaponRack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\WeaponRack\\WeaponRack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\MainMenu Menus\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MainMenu Menus\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\MainMenu Menus\\LeaderboardMenuPanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MainMenu Menus\\LeaderboardMenuPanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "WeaponRack.cs",
-              "DocumentMoniker": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\WeaponRack\\WeaponRack.cs",
-              "RelativeDocumentMoniker": "Assets\\WeaponRack\\WeaponRack.cs",
-              "ToolTip": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\WeaponRack\\WeaponRack.cs",
-              "RelativeToolTip": "Assets\\WeaponRack\\WeaponRack.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAuAAAAAAAAAA==",
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\MainMenu Menus\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu Menus\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\MainMenu Menus\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MainMenu Menus\\MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T14:11:22.788Z",
+              "WhenOpened": "2026-05-06T14:45:11.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LeaderboardMenuPanel.cs",
+              "DocumentMoniker": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\MainMenu Menus\\LeaderboardMenuPanel.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu Menus\\LeaderboardMenuPanel.cs",
+              "ToolTip": "C:\\Users\\Russ\\Desktop\\Unity_Projects\\ArcheryGame\\Assets\\Scripts\\MainMenu Menus\\LeaderboardMenuPanel.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MainMenu Menus\\LeaderboardMenuPanel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T14:44:31.799Z",
               "EditorCaption": ""
             }
           ]

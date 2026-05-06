@@ -2,6 +2,75 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * File: MainMenu.cs
+ *
+ * Description:
+ * Controls the main menu system, including navigation between sections
+ * (Main, Options, About, Leaderboard), scene transitions, and dynamic
+ * generation of the leaderboard UI. Also handles menu state persistence
+ * between scene loads.
+ *
+ * Core Responsibilities:
+ * - Manage main menu navigation (Main / Options / About / Leaderboard)
+ * - Handle scene transitions (Play, Quit, return to menu)
+ * - Dynamically construct and display leaderboard UI
+ * - Configure scrollable leaderboard view and UI layout at runtime
+ * - Control background interaction blocking for UI states
+ *
+ * Key Components:
+ * - _main / _options / _about / _leaderboard:
+ *   References to menu sections in the scene
+ *
+ * - Leaderboard system:
+ *   Dynamically clones and builds UI including:
+ *   - Scroll view
+ *   - Scrollbar
+ *   - Back button
+ *   - Styled score text display
+ *
+ * - SceneFader:
+ *   Handles smooth transitions between scenes
+ *
+ * Behavior Overview:
+ * - Awake():
+ *      - Locates menu sections in the hierarchy
+ *      - Initializes references to UI elements
+ *      - Optionally opens leaderboard on scene load
+ *
+ * - OpenLeaderboard():
+ *      - Builds leaderboard UI if needed
+ *      - Hides other menu sections
+ *      - Shows leaderboard panel
+ *      - Disables background raycast blocking
+ *
+ * - CloseLeaderboard():
+ *      - Restores main menu visibility
+ *      - Hides leaderboard
+ *
+ * - PlayGame():
+ *      - Resets time scale
+ *      - Loads GameScene via SceneFader
+ *
+ * - GoToLeaderboard():
+ *      - Sets flag to open leaderboard after scene load
+ *      - Loads MainMenu scene
+ *
+ * - QuitGame():
+ *      - Exits application
+ *
+ * Dependencies:
+ * - TextMeshPro (TMP)
+ * - Unity UI system (Image, Button, Scrollbar)
+ * - SceneFader (custom transition system)
+ * - LeaderboardMenuPanel (runtime UI controller)
+ *
+ * Notes:
+ * - This script performs significant runtime UI construction.
+ * - Consider refactoring leaderboard generation into a separate UI builder
+ *   for improved maintainability.
+ */
+
 public class MainMenu : MonoBehaviour
 {
 
