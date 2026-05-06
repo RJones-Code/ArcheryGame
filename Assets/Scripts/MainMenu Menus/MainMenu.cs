@@ -6,6 +6,8 @@ public class MainMenu : MonoBehaviour
 {
 
     static readonly Color LeaderboardTextColor = new Color(0.06f, 0.07f, 0.09f, 1f);
+    static readonly Vector2 LeaderboardScrollPositionOffset = new Vector2(0.25f, -0.15f);
+    const float LeaderboardTitleY = 2.2f;
 
     public static bool OpenLeaderboardOnLoad = false;
 
@@ -53,7 +55,11 @@ public class MainMenu : MonoBehaviour
         foreach (var t in _leaderboard.GetComponentsInChildren<TextMeshProUGUI>(true))
         {
             if (t.gameObject.name.Contains("Title"))
+            {
                 t.text = "Leaderboard";
+                var rt = t.rectTransform;
+                rt.anchoredPosition = new Vector2(rt.anchoredPosition.x, LeaderboardTitleY);
+            }
         }
 
         var panel = _leaderboard.AddComponent<LeaderboardMenuPanel>();
@@ -61,11 +67,7 @@ public class MainMenu : MonoBehaviour
         {
             if (t.gameObject.name == "About Text")
             {
-                panel.BindScoresText(t);
-                var scoresRt = t.rectTransform;
-                scoresRt.sizeDelta = new Vector2(420f, 180f);
-                scoresRt.anchoredPosition = new Vector2(scoresRt.anchoredPosition.x, 1.35f);
-                t.raycastTarget = false;
+                SetupLeaderboardScrollView(_leaderboard.transform, panel, t);
                 break;
             }
         }
@@ -79,6 +81,121 @@ public class MainMenu : MonoBehaviour
         StyleLeaderboardText(_leaderboard);
 
         _leaderboard.SetActive(false);
+    }
+
+    static void SetupLeaderboardScrollView(Transform leaderboardRoot, LeaderboardMenuPanel panel, TextMeshProUGUI scoresText)
+    {
+        var scoresRt = scoresText.rectTransform;
+        var oldAnchorMin = scoresRt.anchorMin;
+        var oldAnchorMax = scoresRt.anchorMax;
+        var oldPivot = scoresRt.pivot;
+        var oldAnchoredPos = scoresRt.anchoredPosition;
+        var oldLocalPos = scoresRt.localPosition;
+        var oldRotation = scoresRt.localRotation;
+        var oldScale = scoresRt.localScale;
+        var oldSibling = scoresRt.GetSiblingIndex();
+
+        var scrollRoot = new GameObject("LeaderboardScrollView");
+        scrollRoot.layer = 5;
+        var scrollRt = scrollRoot.AddComponent<RectTransform>();
+        scrollRoot.transform.SetParent(leaderboardRoot, false);
+        scrollRt.anchorMin = oldAnchorMin;
+        scrollRt.anchorMax = oldAnchorMax;
+        scrollRt.pivot = oldPivot;
+        scrollRt.anchoredPosition = new Vector2(
+            oldAnchoredPos.x + LeaderboardScrollPositionOffset.x,
+            1.35f + LeaderboardScrollPositionOffset.y);
+        scrollRt.sizeDelta = new Vector2(420f, 180f);
+        scrollRt.localPosition = oldLocalPos + new Vector3(LeaderboardScrollPositionOffset.x, LeaderboardScrollPositionOffset.y, 0f);
+        scrollRt.localRotation = oldRotation;
+        scrollRt.localScale = oldScale;
+        scrollRt.SetSiblingIndex(oldSibling);
+
+        // Width of the scrollbar strip (viewport uses the rest). Reduced 15% with text inset for tighter layout.
+        const float scrollbarWidth = 16f * 0.85f;
+
+        var viewportGo = new GameObject("Viewport");
+        viewportGo.layer = 5;
+        var viewportRt = viewportGo.AddComponent<RectTransform>();
+        viewportGo.transform.SetParent(scrollRt, false);
+        viewportRt.anchorMin = Vector2.zero;
+        viewportRt.anchorMax = Vector2.one;
+        viewportRt.offsetMin = Vector2.zero;
+        viewportRt.offsetMax = new Vector2(-scrollbarWidth, 0f);
+        var viewportImage = viewportGo.AddComponent<Image>();
+        viewportImage.sprite = CreateWhiteSprite();
+        viewportImage.type = Image.Type.Simple;
+        viewportImage.color = new Color(1f, 1f, 1f, 0.001f);
+        viewportImage.raycastTarget = true;
+
+        var scrollbarGo = new GameObject("Scrollbar Vertical");
+        scrollbarGo.layer = 5;
+        var scrollbarRt = scrollbarGo.AddComponent<RectTransform>();
+        scrollbarGo.transform.SetParent(scrollRt, false);
+        scrollbarRt.anchorMin = new Vector2(1f, 0f);
+        scrollbarRt.anchorMax = new Vector2(1f, 1f);
+        scrollbarRt.pivot = new Vector2(1f, 1f);
+        scrollbarRt.offsetMin = new Vector2(-scrollbarWidth, 0f);
+        scrollbarRt.offsetMax = Vector2.zero;
+
+        var scrollbarBg = scrollbarGo.AddComponent<Image>();
+        scrollbarBg.type = Image.Type.Simple;
+        scrollbarBg.color = new Color(0f, 0f, 0f, 0.2f);
+        var scrollbar = scrollbarGo.AddComponent<Scrollbar>();
+        scrollbar.direction = Scrollbar.Direction.BottomToTop;
+        scrollbar.numberOfSteps = 0;
+
+        var slidingAreaGo = new GameObject("Sliding Area");
+        slidingAreaGo.layer = 5;
+        var slidingRt = slidingAreaGo.AddComponent<RectTransform>();
+        slidingAreaGo.transform.SetParent(scrollbarRt, false);
+        slidingRt.anchorMin = Vector2.zero;
+        slidingRt.anchorMax = Vector2.one;
+        slidingRt.offsetMin = new Vector2(2f * 0.85f, 3f);
+        slidingRt.offsetMax = new Vector2(-2f * 0.85f, -3f);
+
+        var handleGo = new GameObject("Handle");
+        handleGo.layer = 5;
+        var handleRt = handleGo.AddComponent<RectTransform>();
+        handleGo.transform.SetParent(slidingRt, false);
+        handleRt.anchorMin = Vector2.zero;
+        handleRt.anchorMax = Vector2.one;
+        handleRt.offsetMin = Vector2.zero;
+        handleRt.offsetMax = Vector2.zero;
+        var handleImage = handleGo.AddComponent<Image>();
+        handleImage.type = Image.Type.Simple;
+        handleImage.color = new Color(1f, 1f, 1f, 0.85f);
+
+        scrollbar.handleRect = handleRt;
+        scrollbar.targetGraphic = handleImage;
+        scrollbar.value = 1f;
+
+        scoresRt.SetParent(viewportRt, false);
+        scoresRt.anchorMin = new Vector2(0f, 1f);
+        scoresRt.anchorMax = new Vector2(1f, 1f);
+        scoresRt.pivot = new Vector2(0.5f, 1f);
+        scoresRt.anchoredPosition = Vector2.zero;
+        scoresRt.localPosition = Vector3.zero;
+        scoresRt.localRotation = Quaternion.identity;
+        scoresRt.localScale = Vector3.one;
+        scoresRt.sizeDelta = new Vector2(0f, 200f);
+
+        var oldFitter = scoresText.GetComponent<ContentSizeFitter>();
+        if (oldFitter != null)
+            Object.DestroyImmediate(oldFitter);
+
+        scoresText.raycastTarget = false;
+        scoresText.enableWordWrapping = false;
+
+        panel.BindScoresText(scoresText);
+        panel.BindScrollControls(scrollbar, viewportRt);
+        Canvas.ForceUpdateCanvases();
+    }
+
+    static Sprite CreateWhiteSprite()
+    {
+        var tex = Texture2D.whiteTexture;
+        return Sprite.Create(tex, new Rect(0f, 0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100f);
     }
 
     void CreateLeaderboardBackButton(Transform leaderboardRoot, LeaderboardMenuPanel panel, RectTransform clonedAboutBack)
@@ -127,8 +244,7 @@ public class MainMenu : MonoBehaviour
         }
         else
         {
-            img.sprite = Resources.GetBuiltinResource<Sprite>("UI/Skin/UISprite.psd");
-            img.type = Image.Type.Sliced;
+            img.type = Image.Type.Simple;
             img.color = Color.white;
         }
 
