@@ -24,3 +24,6 @@ Thumbs.db
 
 # Local editor / IDE (optional per machine)
 .vscode/
+
+# Visual Studio cache (you already handle most)
+.vs/
