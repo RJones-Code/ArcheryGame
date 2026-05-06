@@ -33,7 +33,8 @@ Assets/Scenes/MainMenu.unity
 Open the game scene and keep unloaded:  
 Assets/Scenes/GameScene.unity  
 
-Press Play to start  
+Make sure XR Device simulator is toggled OFF in both scenes if using occulus or virtual headset.  
+Press Play to start.  
 
 # Project Structure
 Assets/  
@@ -44,6 +45,7 @@ Assets/
 ├── Scripts     (Scripts used for the main gameplay loop, Main Menu, and Game Scene menus)  
 ├── Sounds      (Sounds used for bow effects shoot, drop, pull, and impact, scene music, and audio mixer)  
 ├── Target      (Target Models, Prefabs, Scripts, Textures, and Materials)  
+├── UI          (UI assets for menus, and font file (chomsky))  
 └── WeaponRack  (Weapon Rack Texture and Script)  
 
 # Future Improvements
