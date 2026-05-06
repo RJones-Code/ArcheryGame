@@ -5,6 +5,49 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
+/*
+ * File: BowStringController.cs
+ * 
+ * Description:
+ * Controls the interaction and behavior of the bowstring in the VR archery system.
+ * This script handles grabbing, pulling, and releasing the bowstring using XR interaction.
+ * It calculates the draw strength based on how far the string is pulled and triggers
+ * corresponding events and audio feedback.
+ *
+ * Core Responsibilities:
+ * - Detect when the bowstring is grabbed and released 
+ * - Track the interactor (player hand/controller) position
+ * - Calculate bow draw strength (0 -> 1) based on pull distance
+ * - Clamp pull distance to a configurable maximum
+ * - Update the visual position of the bowstring
+ * - Play audio feedback based on pull movement and direction
+ * - Invoke events when the bow is pulled and released
+ *
+ * Key Components:
+ * - BowString (bowStringRenderer): Handles rendering of the bowstring
+ * - XRGrabInteractable (midPointGrabObject): Enables grabbing interaction
+ * - midPointVisualObject: Visual representation of the string midpoint
+ * - midPointParent: Reference space for calculating local pull distance
+ * - AudioSource: Plays string tension sound effects
+ *
+ * Events:
+ * - OnBowPulled: Invoked when the string is initially grabbed
+ * - OnBowReleased(float strength): Invoked when released, passing final draw strength
+ *
+ * Configuration Notes:
+ * - bowStringStretchLimit is dynamically calibrated using player wingspan
+ * - drawMultiplier controls how far the string can be pulled relative to wingspan
+ * - stringSoundThreshold determines sensitivity of audio playback
+ *
+ * Dependencies:
+ * - Unity XR Interaction Toolkit
+ * - BowString renderer script
+ *
+ * Usage:
+ * Attach this script to the bowstring midpoint object.
+ * Ensure all serialized references are properly assigned in the inspector.
+ */
+
 public class BowStringController : MonoBehaviour
 {
     [SerializeField]
